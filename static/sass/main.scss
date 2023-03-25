@@ -1,0 +1,106 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../font/Poppins-Medium.ttf");
+}
+$color: (
+  "green": #4e9,
+  "black": #000,
+  "black_transparent": rgba(0, 0, 0, 0.3),
+  "white": #fff,
+  "magnenta": #ff00ff,
+  "orchid": #da70d6,
+  "violet": #ee82ee,
+  "plum": #dda0dd,
+  "blue": blue,
+);
+@mixin input-login($width, $padding) {
+  /*border-radius: 20px;*/
+  outline: none;
+  background: transparent;
+  color: map-get($color, "white");
+  font-family: Poppins;
+  padding: $padding;
+  width: $width;
+  margin: 5px 0;
+  border: none;
+  border-bottom: 1px solid map-get($color, "violet");
+  font-size: 1em;
+}
+::selection {
+  background: map-get($color, "violet");
+  color: map-get($color, "black");
+}
+::placeholder {
+  color: map-get($color, "white");
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  background-image: url("../../img/5238994.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Poppins;
+}
+.login {
+  background-color: map-get($color, "black_transparent");
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  text-align: center;
+  align-items: center;
+  width: 380px;
+  h1 {
+    color: map-get($color, "white");
+    text-transform: uppercase;
+    font-weight: 300;
+    margin-bottom: 20px;
+  }
+  i {
+    color: map-get($color, "white");
+    position: absolute;
+    margin-left: 10px;
+    margin-top: 20px;
+  }
+  input[type="text"],
+  input[type="password"] {
+    @include input-login(260px, 10px 15px);
+    transition: 0.5s;
+    padding-left: 40px;
+    &:hover {
+      width: 270px;
+    }
+  }
+  input[type="submit"] {
+    width: 120px;
+    padding: 8px;
+    font-family: Poppins;
+    border-radius: 20px;
+    background: map-get($color, "violet");
+    color: map-get($color, "black");
+    font-size: 1em;
+    border: none;
+    margin-top: 20px;
+  }
+  .register {
+    /*border: 1px solid map-get($color, "white");*/
+    margin-top: 20px;
+    p {
+      color: map-get($color, "white");
+      a {
+        display: inline-block;
+        color: map-get($color, "white");
+        text-decoration: underline;
+      }
+    }
+  }
+}

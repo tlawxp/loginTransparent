@@ -1,0 +1,99 @@
+@font-face {
+  font-family: Poppins;
+  src: url("../font/Poppins-Medium.ttf");
+}
+::selection {
+  background: #ee82ee;
+  color: #000;
+}
+
+::placeholder {
+  color: #fff;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-image: url("../../img/5238994.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  font-family: Poppins;
+}
+
+.login {
+  background-color: rgba(0, 0, 0, 0.3);
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 40px;
+  border-radius: 10px;
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  text-align: center;
+  align-items: center;
+  width: 380px;
+}
+.login h1 {
+  color: #fff;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-bottom: 20px;
+}
+.login i {
+  color: #fff;
+  position: absolute;
+  margin-left: 10px;
+  margin-top: 20px;
+}
+.login input[type=text],
+.login input[type=password] {
+  /*border-radius: 20px;*/
+  outline: none;
+  background: transparent;
+  color: #fff;
+  font-family: Poppins;
+  padding: 10px 15px;
+  width: 260px;
+  margin: 5px 0;
+  border: none;
+  border-bottom: 1px solid #ee82ee;
+  font-size: 1em;
+  transition: 0.5s;
+  padding-left: 40px;
+}
+.login input[type=text]:hover,
+.login input[type=password]:hover {
+  width: 270px;
+}
+.login input[type=submit] {
+  width: 120px;
+  padding: 8px;
+  font-family: Poppins;
+  border-radius: 20px;
+  background: #ee82ee;
+  color: #000;
+  font-size: 1em;
+  border: none;
+  margin-top: 20px;
+}
+.login .register {
+  /*border: 1px solid map-get($color, "white");*/
+  margin-top: 20px;
+}
+.login .register p {
+  color: #fff;
+}
+.login .register p a {
+  display: inline-block;
+  color: #fff;
+  text-decoration: underline;
+}
+
+/*# sourceMappingURL=style.css.map */
